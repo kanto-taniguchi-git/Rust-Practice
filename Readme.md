@@ -40,8 +40,7 @@ cargo check
 cargo build --release
 ```
 
-### 値の取り扱い
-[変数・定数について](https://doc.rust-jp.rs/book-ja/ch03-01-variables-and-mutability.html)  
+### 値の取り扱い 
 変数は不変である。
 ```rust
 let x = 5;
@@ -68,6 +67,16 @@ const MAX_POINTS: u32 = 100_000;
 println("{}", MAX_POINTS);
 ```
 ※定数は大文字とアンダースコアで表記し、型は必ず注釈する。  
+[変数・定数について](https://doc.rust-jp.rs/book-ja/ch03-01-variables-and-mutability.html) 
+
+### データ型
+**let 変数名: データ型 = 値;**
+- 整数型(上段：符号付き、下段：符号なし)
+    - i8, i16, i32, i64, i128, isize
+    - u8, u16, u32, u64, u128, usize  
+i32が基準型。
+  
+可読性を上げるために、100000を100_000のようにアンダースコアで区切ることが出来る。 他にも先頭に0xで16進数、0oで8進数、0bで2進数、b'A'でバイト(u8のみ)が使える。 
 
 ### 資料
 - [Rustのドキュメント(日本語訳)](https://doc.rust-jp.rs/book-ja/title-page.html)
