@@ -66,7 +66,21 @@ let spaces = spaces.len();
 const MAX_POINTS: u32 = 100_000;
 println("{}", MAX_POINTS);
 ```
+タプルの添え字は0から始まる。型も自由。 
+```rust
+let tup: (i32, f64, u8) = (500, 6.4, 1);
+println!("{}", tup.0); // 500
+```
+配列は全て同じ型でなければならない。*固定長であり、要素数を変更することは出来ない*。  
+ベクタ型なら変更できるので基本的にはベクタ型を使う。
+```rust
+let a = [1, 2, 3, 4, 5];
+let b: [f32; 5] = [6, 7, 8, 9, 10];
+let c = [3; 5]; // 初期値3の要素が5つ
+println!("{}", a[0]); // 1
+```
 ※定数は大文字とアンダースコアで表記し、型は必ず指定する。  
+※未使用変数には*アンダースコア*をつけることで警告が消える。  
 [変数・定数について](https://doc.rust-jp.rs/book-ja/ch03-01-variables-and-mutability.html) 
 
 ### データ型
@@ -88,7 +102,7 @@ char型はシングルクォートで囲む。
 ```rust
 let c = 'z';
 ```
-
+[データ型について](https://doc.rust-jp.rs/book-ja/ch03-02-data-types.html)
 ### 資料
 - [Rustのドキュメント(日本語訳)](https://doc.rust-jp.rs/book-ja/title-page.html)
 

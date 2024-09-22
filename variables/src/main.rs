@@ -9,7 +9,7 @@ fn main() {
     // println!(spaces);
 
     let spaces = "   ";
-    let spaces = spaces.len();
+    let spaces = spaces.len(); // シャドーイング：覆い隠す
     println!("{}", spaces);
 
     const MAX_POINTS: u32 = 100_000;
@@ -55,5 +55,15 @@ fn main() {
     println!("{}, {}, {}, {}", _c, _z, _enjinner, _byte_data);
 
     // 複合型
-    
+    // タプル
+    let tup: (i32, f64, u8) = (200_000, 6.4, 1);
+    let (tup_x, tup_y, tup_z) = tup; // 分配
+    println!("The value of tup_y is: {}", tup_y);
+    println!("The value of tup.0 is: {}", tup.0);
+
+    // 配列
+    let list_a = [1, 2, 3, 4, 5];
+    let list_b: [i32; 5] = [1, 2, 3, 4, 5]; // i32型の要素が5つ
+    let list_c = [3, 5]; // 3で初期化した配列が5つ
+    println!("The value of list_a[0] is: {}", list_a[0]);
 }
