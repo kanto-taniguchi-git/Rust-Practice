@@ -66,7 +66,7 @@ let spaces = spaces.len();
 const MAX_POINTS: u32 = 100_000;
 println("{}", MAX_POINTS);
 ```
-※定数は大文字とアンダースコアで表記し、型は必ず注釈する。  
+※定数は大文字とアンダースコアで表記し、型は必ず指定する。  
 [変数・定数について](https://doc.rust-jp.rs/book-ja/ch03-01-variables-and-mutability.html) 
 
 ### データ型
@@ -74,9 +74,20 @@ println("{}", MAX_POINTS);
 - 整数型(上段：符号付き、下段：符号なし)
     - i8, i16, i32, i64, i128, isize
     - u8, u16, u32, u64, u128, usize  
-i32が基準型。
+整数はi32が基準型。浮動小数点数はf64が基準型。
   
 可読性を上げるために、100000を100_000のようにアンダースコアで区切ることが出来る。 他にも先頭に0xで16進数、0oで8進数、0bで2進数、b'A'でバイト(u8のみ)が使える。 
+
+論理値型は型の指定が必要。
+```rust
+let t: bool = true;
+let f: bool = false;
+```
+
+char型はシングルクォートで囲む。
+```rust
+let c = 'z';
+```
 
 ### 資料
 - [Rustのドキュメント(日本語訳)](https://doc.rust-jp.rs/book-ja/title-page.html)
