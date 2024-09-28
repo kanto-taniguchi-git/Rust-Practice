@@ -17,8 +17,8 @@ exeファイルパス
 ### 2.ビルドと実行
 [Cargo](https://doc.rust-jp.rs/book-ja/ch01-03-hello-cargo.html)を使う。Cargoはビルドシステム兼パッケージマネージャー。
 ```bash
-cargo --version // バージョンが表示される
-cargo new --bin プロジェクト名
+cargo --version // インストールの確認
+cargo new --bin project // プロジェクトの作成
 ```
 プロジェクトのビルドと実行。
 ```bash
@@ -39,6 +39,7 @@ cargo build --release
 ```
 
 ### 3.値の取り扱い 
+[Link](https://github.com/kanto-taniguchi-git/Rust-Practice/blob/main/variables/src/main.rs)  
 変数は不変である。
 ```rust
 let x = 5;
@@ -82,6 +83,7 @@ println!("{}", a[0]); // 1
 [変数・定数について](https://doc.rust-jp.rs/book-ja/ch03-01-variables-and-mutability.html) 
 
 ### 4.データ型
+[Link](https://github.com/kanto-taniguchi-git/Rust-Practice/blob/main/variables/src/main.rs)  
 **let 変数名: データ型 = 値;**
 - 整数型(上段：符号付き、下段：符号なし)
     - i8, i16, i32, i64, i128, isize
@@ -101,8 +103,36 @@ char型はシングルクォートで囲む。
 ```rust
 let c = 'z';
 ```
-
 [データ型について](https://doc.rust-jp.rs/book-ja/ch03-02-data-types.html)
+
+### 関数
+- 文は値を返さない。式は値を返す。
+```rust
+let y = 5; // 文
+y + 1 //式：終端にセミコロンがない
+```
+変数は束縛される。
+```rust
+let z = {
+    let zz = 3;
+    zz + 1
+};
+println!("The value of z is: {}", z); // z = 4, zz = error
+```
+関数には戻り値を返す関数と返さない関数がある。
+```rust
+// 戻り値を返さない関数
+fn print(num: i32) { // 仮引数の型の指定は必須
+    println!("The value of num is: {}", num);
+}
+
+// 戻り値を返す関数
+fn five() -> i32 { // 戻り値の型の指定は必須
+    5
+}
+```
+[関数について](https://doc.rust-jp.rs/book-ja/ch03-03-how-functions-work.html)
+
 ### 5.資料
 - [Rustのドキュメント(日本語訳)](https://doc.rust-jp.rs/book-ja/title-page.html)
 
