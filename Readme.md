@@ -38,7 +38,7 @@ cargo check
 cargo build --release
 ```
 
-### 3.値の取り扱い 
+### 3.値の取り扱い
 [Link](https://github.com/kanto-taniguchi-git/Rust-Practice/blob/main/variables/src/main.rs)  
 変数は不変である。
 ```rust
@@ -106,6 +106,7 @@ let c = 'z';
 [データ型について](https://doc.rust-jp.rs/book-ja/ch03-02-data-types.html)
 
 ### 関数
+[Link](https://github.com/kanto-taniguchi-git/Rust-Practice/blob/main/another_function/src/main.rs)  
 - 文は値を返さない。式は値を返す。
 ```rust
 let y = 5; // 文
