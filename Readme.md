@@ -7,27 +7,25 @@
 
 など様々な特徴がある。
 
-### コンパイルと実行
+### 1.コンパイルと実行
 ```bash
 rustc ファイル名.rs
 exeファイルパス
 ```
-
 - [Rustのコンパイル](https://doc.rust-jp.rs/book-ja/ch01-02-hello-world.html)
 
-
-### ビルドと実行
+### 2.ビルドと実行
 [Cargo](https://doc.rust-jp.rs/book-ja/ch01-03-hello-cargo.html)を使う。Cargoはビルドシステム兼パッケージマネージャー。
 ```bash
-cargo --version
+cargo --version // バージョンが表示される
 cargo new --bin プロジェクト名
 ```
-バージョンナンバーが表示されていたらインストールされている。
+プロジェクトのビルドと実行。
 ```bash
 cargo build
 exeファイルパス
 ```
-一つのコマンドでビルドから実行まで行うことが出来る。
+一つのコマンドでコードのコンパイルから実行まで行うことが出来る。
 ```bash
 cargo run
 ```
@@ -40,7 +38,7 @@ cargo check
 cargo build --release
 ```
 
-### 値の取り扱い 
+### 3.値の取り扱い 
 変数は不変である。
 ```rust
 let x = 5;
@@ -83,7 +81,7 @@ println!("{}", a[0]); // 1
 ※未使用変数には**アンダースコア**をつけることで警告が消える。  
 [変数・定数について](https://doc.rust-jp.rs/book-ja/ch03-01-variables-and-mutability.html) 
 
-### データ型
+### 4.データ型
 **let 変数名: データ型 = 値;**
 - 整数型(上段：符号付き、下段：符号なし)
     - i8, i16, i32, i64, i128, isize
@@ -103,8 +101,9 @@ char型はシングルクォートで囲む。
 ```rust
 let c = 'z';
 ```
+
 [データ型について](https://doc.rust-jp.rs/book-ja/ch03-02-data-types.html)
-### 資料
+### 5.資料
 - [Rustのドキュメント(日本語訳)](https://doc.rust-jp.rs/book-ja/title-page.html)
 
 - [基礎からしっかり学ぶRust入門](https://atmarkit.itmedia.co.jp/ait/series/24844/)

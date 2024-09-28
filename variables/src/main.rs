@@ -64,6 +64,6 @@ fn main() {
     // 配列
     let list_a = [1, 2, 3, 4, 5];
     let list_b: [i32; 5] = [1, 2, 3, 4, 5]; // i32型の要素が5つ
-    let list_c = [3, 5]; // 3で初期化した配列が5つ
+    let list_c = [3; 5]; // 3で初期化した配列が5つ
     println!("The value of list_a[0] is: {}", list_a[0]);
 }
